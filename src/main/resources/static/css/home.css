@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.jeepPhoto1{
+    height:auto ;
+    width:39% ;
+}
+
+.jeepPhoto2{
+    height:auto ;
+    width:39% ;
+}
+
+.jeepPhoto3{
+    height: 100% ;
+    width:39% ;
+}
+
+
+
+.logo{
+    font-size: 2em;
+    color: #359381;
+    pointer-events: none;
+    margin-right: 270px;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #359381;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    background: #359381;
+    color: #fff;
+
+}
+
+.parralax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text{
+    position: absolute;
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,-2);
+}
+
+.parralax img{
+    position:absolute ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec{
+    position: relative;
+    background: #003329;
+    padding: 100px;
+}
+
+.sec h2{
+    font-size: 3em;
+    color:#fff ;
+    margin-bottom: 10px;
+}
+
+.sec h3{
+    font-size: 2em;
+    color:#fff ;
+    margin-bottom: 10px;
+}
+.sec p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.sec2{
+    position: relative;
+    background: #003329;
+    padding: 100px;
+}
+
+.sec2 h2{
+    font-size: 3em;
+    color:#fff ;
+    margin-bottom: 10px;
+}
+
+.sec2 p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2em;
+    color: #359381;
+    pointer-events: none;
+    margin-right: 270px;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #359381;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    background: #359381;
+    color: #fff;
+}
+
+.parallax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text{
+    position: absolute;
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,-2);
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec{
+    position: relative;
+    background: #003329;
+    padding: 100px;
+}
+
+.sec h2{
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.sec p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .logo {
+        margin-right: 0;
+    }
+
+    .navigation a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+
+    .parallax {
+        height: 60vh;
+    }
+
+    #text {
+        font-size: 3em;
+    }
+
+    .sec {
+        padding: 50px;
+    }
+
+    .sec h2 {
+        font-size: 2em;
+    }
+
+    .sec p {
+        font-size: 0.8em;
+    }
+}
+
+
+
+
+.img-grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.myimg-container {
+    display: flex;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.myimg-container > * {
+    border-radius: 7px;
+    overflow: hidden;
+    height: 400px;
+    width: 100px;
+    transition: all 500ms;
+}
+
+.expanded {
+    flex: 1;
+}
+
+.myimg-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+

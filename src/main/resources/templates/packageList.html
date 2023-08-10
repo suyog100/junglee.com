@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Package List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link th:href="@{/assets/dist/css/bootstrap.min.css}" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .section-bg{
+    /*th:style='background-image: url( @{/images/bg2.jpg} )*/
+
+
+    /*background: url(/JungleSafari/animalImages/bg2.jpg);*/
+
+  }
+</style>
+
+
+<!-- Custom styles for this template -->
+<link th:href="@{/css/packageList.css}" rel="stylesheet">
+</head>
+<body style="background-image: url('/images/bg2.jpg');" >
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
+  <div class="container-fluid">
+    <img class="weblogo" th:src="@{/images/gg3.png}" alt="">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Package</a>
+        </li>
+
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit"> Search </button>
+      </form>
+    </div>
+  </div>
+</nav>
+<main>
+
+  <section class="py-5 text-center container section-bg">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light font-weight-bold">Best Selling Packages</h1>
+        <p class="lead  text-white">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+        <p>
+          <a href="#" class="btn btn-primary my-2">Main call to action</a>
+          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" >
+        <div class="col" th:each="pack:${packs}">
+          <div class="card shadow-sm" >
+            <img th:src="'data:image/png;base64,'+${pack.imageBase64}" alt="">
+            <div class="card-body">
+<!--              <p class="card-text">Jeep safari is an exciting and adventurous activity that involves exploring natural landscapes and wildlife in a rugged terrain using specially designed off-road vehicles called jeeps. It offers a unique way to experience the thrill of off-roading while immersing oneself in the beauty of diverse ecosystems, such as jungles, deserts, mountains, or national parks.</p>-->
+              <p class="card-text" th:text="${pack.pack_description}"></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+<!--                  <button type="button" class="btn btn-sm btn-outline-secondary">Book 50$</button>-->
+                  <a type="button" href="/make" class="btn btn-sm btn-outline-secondary">Book 50$</a>
+
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--        <div class="col">-->
+<!--          <div class="card shadow-sm">-->
+<!--            <img th:src="@{/images/canoeMid.jpg}" alt="">-->
+<!--            <div class="card-body">-->
+<!--              <p class="card-text">A canoe is a narrow boat with pointed. Canoes provide a peaceful and serene way to navigate through water, allowing individuals or small groups to enjoy nature and engage in recreational activities like fishing or exploring. They are versatile, easy to maneuver, and offer a close connection with the water and surrounding environment.</p>-->
+<!--              <div class="d-flex justify-content-between align-items-center">-->
+<!--                <div class="btn-group">-->
+<!--                  <button type="button" class="btn btn-sm btn-outline-secondary">Book 50$</button>-->
+<!--                </div>-->
+<!--                <small class="text-muted">9 mins</small>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col">-->
+<!--          <div class="card shadow-sm">-->
+<!--            <img th:src="@{/images/elephantRide.jpg}"  alt="">-->
+<!--            <div class="card-body">-->
+<!--              <p class="card-text">-->
+<!--                Elephant riding in safaris offers a unique experience. Sitting atop these gentle giants, participants can explore the wilderness, gaining a higher point observing wildlife. However, it is important to consider ethical aspects, ensuring the well-being and treatment of elephants. Responsible and sustainable practices prioritize the welfare of these magnificent creatures.</p>-->
+<!--              <div class="d-flex justify-content-between align-items-center">-->
+<!--                <div class="btn-group">-->
+<!--                  <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>-->
+<!--                </div>-->
+<!--                <small class="text-muted">9 mins</small>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col">-->
+<!--          <div class="card shadow-sm">-->
+<!--            <img th:src="@{/images/bath.jpg}" alt="">-->
+<!--            <div class="card-body">-->
+<!--              <p class="card-text"></p>The elephant bathing experience is a delightful encounter that allows participants to interact with elephants in a refreshing and intimate way. Immersed in water, visitors can join these majestic creatures, scrubbing them with brushes, and witnessing their playful antics. It offers a unique opportunity to bond with elephants while also promoting their well-being and conservation efforts.-->
+<!--              <div class="d-flex justify-content-between align-items-center">-->
+<!--                <div class="btn-group">-->
+<!--                  <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>-->
+<!--                </div>-->
+<!--                <small class="text-muted">9 mins</small>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col">-->
+<!--          <div class="card shadow-sm">-->
+<!--            <img th:src="@{/images/walkk.jpg}" alt="">-->
+<!--            <div class="card-body">A jungle walk is an immersive adventure that takes you deep into the heart of nature. With each step, you explore the untamed beauty of lush forests, encountering diverse flora and fauna. Guided by experts, you learn about the intricate ecosystem, spot wildlife, and listen to the symphony of nature. It's an unforgettable journey of discovery and connection with the wilderness.-->
+<!--              <p class="card-text"></p>-->
+<!--              <div class="d-flex justify-content-between align-items-center">-->
+<!--                <div class="btn-group">-->
+<!--                  <button type="button" class="btn btn-sm btn-outline-secondary">Book 60$</button>-->
+<!--                </div>-->
+<!--                <small class="text-muted">9 mins</small>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col">-->
+<!--          <div class="card shadow-sm">-->
+<!--            <img th:src="@{/images/setsun.jpg}" alt="">-->
+<!--            <div class="card-body">-->
+<!--              <p class="card-text">Watching a riverside sunset is a breathtaking experience. As the sun dips below the horizon, the tranquil waters reflect the vibrant hues of orange, pink, and gold. The gentle breeze caresses your skin, and the sound of flowing water creates a serene ambiance. It's a magical moment of serenity and natural beauty that leaves an indelible impression.</p>-->
+<!--              <div class="d-flex justify-content-between align-items-center">-->
+<!--                <div class="btn-group">-->
+<!--                  <button type="button" class="btn btn-sm btn-outline-secondary">Book 50$</button>-->
+<!--                </div>-->
+<!--                <small class="text-muted">9 mins</small>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+</main>
+
+
+
+
+
+<!--End of Add package page-->
+<footer class="bg-success text-white pt-5 pb-4">
+  <div class="container text-center text-md-left">
+    <div class="row text-center text-md-left">
+
+      <div class="row text-center text text-md-left">
+
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Junglee</h5>
+          <p>Here you can use rows and columns to organize your footer content</p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+
+          <p>
+            <a href="#" class="text-white" style="text-decoration: none;">The Providers</a>
+          </p>
+
+          <p>
+            <a href="#" class="text-white" style="text-decoration: none;">Creativity</a>
+          </p>
+
+          <p>
+
+            <a href="#" class="text-white" style="text-decoration: none;">Source file</a>
+          </p>
+
+          <p>
+            <a href="#" class="text-white" style="text-decoration: none;">BootStrap</a>
+          </p>
+
+        </div>
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+          <p>
+            <a href="#" class="text-white" style="text-decoration: none;">Your account</a>
+          </p>
+
+          <p>
+            <a href="#" class="text-white" style="text-decoration: none;">Become affiliate</a>
+          </p>
+
+          <p>
+            <a href="#" class="text-white" style="text-decoration: none;">Shipping Rates</a>
+          </p>
+
+          <p>
+            <a href="#" class="text-white" style="text-decoration: none;">Help</a>
+          </p>
+        </div>
+
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+          <p>
+            <i class="fas fa-home mr-3"></i>New York, NY 2333, US
+          </p>
+
+          <p>
+            <i class="fas fa-envelope mr-3"></i>mandone8776@gmail.com
+          </p>
+
+          <p>
+            <i class="fas fa-phone mr-3"></i>+977 9851204534
+          </p>
+
+          <p>
+            <i class="fas fa-print mr-3"></i>+01 458785
+          </p>
+        </div>
+      </div>
+      <hr class="mb-4">
+
+      <div class="row align-items-center">
+
+        <div class="col-md-7 col-lg-8">
+          <p>Copyright @2023 All rights reserved by:
+            <a href="#" style="text-decoration: none;">
+              <strong class="text-warning">Junglee</strong>
+            </a>
+          </p>
+
+        </div>
+        <div class="col-md-5 col-lg-4">
+          <div class="text-center text-md-right">
+
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fa-twitter"></i></a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linked-in"></i></a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+              </li>
+
+            </ul>
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script th:src="@{/assets/dist/js/bootstrap.bundle.min.js}"></script>
+
+
+
+
+
+</body>
+</html>
